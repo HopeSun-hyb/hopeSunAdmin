@@ -35,7 +35,7 @@ module.exports = {
         hotOnly: false,
         proxy: {
           "/devApi": {
-              target: "http://www.web-jshtml.cn/api", //API服务器的地址
+              target: "http://www.web-jshtml.cn/vue_admin_api", //API服务器的地址
               changeOrigin: true,
               pathRewrite: {
                   "^/devApi": ''

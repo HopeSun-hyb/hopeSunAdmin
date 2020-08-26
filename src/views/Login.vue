@@ -145,7 +145,7 @@ export default {
       let param = {username:this.ruleForm.username, module: 'register'}
       request.post('/getSms/', param)
       .then(function (response) {
-        console.log(response);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
