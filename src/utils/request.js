@@ -5,4 +5,11 @@ const request = axios.create({
     timeout: 6000,
 })
 
+//HTTPresponse拦截
+request.interceptors.response.use(res => {
+    return res.data;
+},error => {
+    return Promise.reject(new Error(error));
+})
+
 export default request

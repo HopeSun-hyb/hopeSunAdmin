@@ -21,7 +21,8 @@ module.exports = {
             scss: {
                 // @/ 是 src/ 的别名
                 // 配置scss要加;   参考：https://cli.vuejs.org/zh/guide/css.html
-                prependData: `@import "~@/common/style/base.scss";`
+                prependData: `@import "~@/common/style/base.scss";
+                              @import "~@/common/style/var.scss";`
             }      
         }    
     },

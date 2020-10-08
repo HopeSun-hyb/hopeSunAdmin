@@ -52,3 +52,28 @@ npm run build
 ## 1.9 请求拦截器中添加 请求头 config.headers
 ## 2.0 代码规整  1. 一个函数做一件事情  2.将相同代码封装到一个函数中
 
+# 2020.9.6
+## 1.1 搭建Layout首页，分三部分布局  header   Main   Nav
+
+## 1.2 nav fixed布局  header 布局 fixed，  
+## 1.3 定义总的scss
+
+# 2020.9.
+## meta 对象  （隐藏不需展示的路由）hidden  选中背景颜色#f56c6c  font-size：14px 二级目录背景  一级背景颜色
+## 1. 拿到element-sub-elemt 复制， 保留两级， 拿到路由，循环一级 ，循环二级， 设置 router-index,
+##   控制台-首页   项目管理（信息管理，信息分类） 用户管理（用户列表）
+
+# 2020.9.15
+## 简化公共 组件 import
+## vue 重新指向
+## [svgIcon组件未做](https://www.bilibili.com/video/BV1zJ411g7Fx?p=21)
+
+# 2020.10.7
+
+## 缩进图标 关闭图标  和用户名 用户图片
+
+# 2020.10.8
+## vueX   state,getters(computed) mutations 
+## 定义class css动画 transition
+## 解决vuex 刷新不保存值  1. 本地存储  2.cookies 
+

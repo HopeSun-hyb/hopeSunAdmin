@@ -1,0 +1,11 @@
+// 左侧导航栏 宽度
+$navWidth: 200px;
+$navWidthMin: 64px;
+
+// 白色背景
+$backgroundWhite: #ffffff;
+
+// 动画
+@mixin set-transition($type, $time) { 
+    transition: $type $time;
+}
