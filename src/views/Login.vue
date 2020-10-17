@@ -115,7 +115,8 @@ export default {
      submitForm(formName) {
       this.$refs[formName].validate(async (valid) =>  {
         if (valid) {
-          let res = await login(this.ruleForm)
+          let res = await this.$store.dispatch("app/LOG_IN", this.ruleForm)
+          // console.log("res+++", this.$store.dispatch("app/LOG_IN", this.ruleForm))
           if(res.resCode==0) {
             this.$router.push({path: '/layout'})
           }

@@ -16,9 +16,17 @@ export default{
         LayoutHeader,
         LayoutMain
     },
+
+    created(){
+        if("555"){
+            console.log("空数组++++++++++")
+        } else {
+           console.log("非空数组------------") 
+        }
+    },
     computed:{
         isCollopse: function() {
-            return this.$store.state.isCollapse
+            return this.$store.state.app.isCollapse
         }
     }
 }

@@ -4,21 +4,37 @@
             <div class="left" @click="isCollapse"><i class="el-icon-s-fold"></i></div>
             <div class="right">
                 <img src="~@/assets/img/userName.jpg" alt="">
-                <span class="userName">小哥帶你飛</span>
-                <i class="el-icon-switch-button logout"></i>
+                <span class="userName">{{userName}}</span>
+                <i class="el-icon-switch-button logout" @click="logout"></i>
             </div>
         </div>
     </div> 
 </template>
 <script>
+import cookie from 'cookie_js'
 export default {
     name: 'Header',
+    created() {
+    
+       
+    },
     methods:{
         // 收缩
         isCollapse(){
-            this.$store.commit("SET_COLLAPSE")
-            console.log("dddd---------")
-        } 
+            this.$store.commit("app/SET_COLLAPSE")
+         
+        },
+
+        // 退出登陆
+        logout() {
+            this.$store.dispatch("app/LOG_OUT")
+        }
+    },
+
+    computed: {
+        userName: function() {
+            return this.$store.state.app.userName;
+        }
     }
     
 }

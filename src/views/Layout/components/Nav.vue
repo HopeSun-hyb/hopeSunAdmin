@@ -41,8 +41,7 @@ export default {
     },
     computed: {
         isCollapse:function() {
-            console.log("isCollapse+++",this.$store.state.isCollapse)
-            return this.$store.state.isCollapse
+            return this.$store.state.app.isCollapse
         }
     },
     methods: {

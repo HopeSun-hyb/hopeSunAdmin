@@ -77,3 +77,32 @@ npm run build
 ## 定义class css动画 transition
 ## 解决vuex 刷新不保存值  1. 本地存储  2.cookies 
 
+# 2020.10.12 
+## 通过 actions 修改 isCollapse的值 dispatch   commit 
+## 使用 promise  将login  迁入到  actions  .then  .catch
+## modules  app分模块
+##  vuex 命名空间
+
+# 2020.10.14
+## 路由守衛 路由一改變就會觸發
+## 通過js_cookie  获取token  结合路由守卫
+## 路由白名单  防止死循环  next()传参数 会重新 调用 路由守卫
+
+## 接口 增加 /token
+## 在登陆接口 将 token username 存到 vuex  中
+## 定义常量
+## username 放上去  computed
+
+# 2020.10.17
+
+## 路由跳转 login 时，清除token ,防止直接输入路由直接进去
+## 登出
+## 合并其他分支到当前分支
+
+
+
+
+
+# 流程图
+## 登陆流程图
+![登陆流程图](imgFile/登陆流程图.png)

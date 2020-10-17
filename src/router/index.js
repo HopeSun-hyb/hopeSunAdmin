@@ -1,5 +1,7 @@
+import cookie from 'cookie_js'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '../store/index'
 
 Vue.use(VueRouter)
 
@@ -92,6 +94,33 @@ const router = new VueRouter({
   // mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+// 白名单
+const whiteRouter = ["/login"]
+// 全局路由守卫
+router.beforeEach((to, from, next)=> {
+  // 本地有 token
+  if(store.state.app.token) {
+    // 防止通过非法进入 向 /login 再 /home
+    if(to.path == "/login") {
+      // 删除token
+      store.commit("app/SET_TOKEN", "")
+      next()
+    } else {
+      next()
+    }
+ 
+  } else {
+    // 如果没有 token 进入登陆页面
+    if(whiteRouter.includes(to.path)) {
+      next()
+    } else {
+      next("/login")
+    }
+   
+  }
+  
 })
 
 export default router
